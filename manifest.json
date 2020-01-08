@@ -1,0 +1,23 @@
+{
+   "author": "Steve Jain",
+   "browser_action": {
+      "default_icon": "images/logo128.png"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newTab.html"
+   },
+   "content_security_policy": "script-src 'self' https://confidencehq.org/allthebooks/100mb-1m.php; object-src 'self'",
+   "description": "Explore all the books ever written...and discover the best ideas ever published.",
+   "icons": {
+      "128": "images/logo128.png"
+   },
+   "manifest_version": 2,
+   "name": "100 Million Books (Minimal Theme)",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "short_name": "100 Million Books (Minimal Theme)",
+   "version": "4.2.2"
+}

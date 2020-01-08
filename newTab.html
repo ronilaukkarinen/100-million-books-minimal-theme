@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/css/flat-ui.min.css">
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/css/animate.min.css">
+    <link rel="stylesheet" href="newTab.css">
+
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    
+    <script src="newTab.js"></script>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+
+    <title>New Tab</title>
+
+    <body>
+        <div id='page-filter'></div>
+        <div class="col-xs-6 col-xs-offset-5" id="tab-options"></div> 
+        
+        <div class="modal fade" id="first-time" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Welcome</h4>
+            </div>
+            <div class="modal-body">
+                
+                <p>Hi. I'm Steve, lead maintainer of 100 Million Books. I'm so glad you're here!</p>
+                
+                <p>You're joining thousands of people across 100+ countries who discover new books on here every day.</p>
+
+                <p>You'll see all kinds of stuff on here: modern best-sellers & popular titles, ancient classics from far corners of the world, rare out-of-print titles that never got much attention...and so much more.</p>
+                
+                <p>Every excerpt on here is <u>hand-picked</u>—no algorithms or funny business.</p>
+                
+                <p>That's exactly what makes this thing special. It isn't run by a large company trying to optimize sales or clicks. Books are presented randomly—so it's kind of like browsing your favorite second-hand bookshop, but WAY bigger (and you can do it at work).</p>
+                
+                <p>Always feel free to reach out to me directly at <a href='mailto:steve@100millionbooks.org' target='_blank'>steve@100millionbooks.org</a> with feedback, suggestions, or just to say hi. I would love to hear from you.</p>
+                
+                <p>You can follow us on <a href='https://twitter.com/100millionbooks' target='_blank'>Twitter</a>.</p>
+                
+                <p>Cheers,<br>Steve Jain</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Great, got it!</button>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+        
+        <div class="modal fade" id="faves-list" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Favorites</h4>
+            </div>
+            <div class="modal-body">
+                <p class="note favorites">Be careful! These favorites aren't backed up anywhere. They'll disappear if you remove this extension or clear your browser data.</p>
+                <div class='brief-list'>
+                    
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+        
+        <div class="modal fade" id="history-list" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">History</h4>
+            </div>
+            <div class="modal-body">
+                <p class="note favorites">Your past 20 books, most recent first.</p>
+                <div class='brief-list'>
+                    
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="row title-area">
+            <div class="post-load">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <section class="fave"></section>
+                    <h1 id='book-title'></h1>
+                    <p id='author-year'><span id='book-author'></span>; <span id='book-year'></span><span id='suggestion-credit'></span></p>
+                    <div class="top-right"></div>
+                </div>
+            </div>
+            
+            <div class="pre-load">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="top-right"></div>
+                </div>
+            </div>
+            
+            <!-----------------------------------------------------------------
+            3 big announcements
+            ------------------------------------------------------------------>
+            <div id="announcement-dash">
+                <i class="fa fa-circle new"></i>
+                <img src='images/announcement-note.png'>
+                <a class='btn btn-primary btn-special'><i class="fa fa-angle-down" aria-hidden="true"></i> Show Announcements <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            </div>
+            <div id='service-announcements'>
+                <div style="position:absolute;width:100%;height:500px;">
+                    <div class='announcement-third'>
+                      
+                    </div>
+                    <div class='announcement-third oc-email'>
+                        <h5>"The Occasional Curiosity"</h5>
+                        <img src='images/occasional-branding-transparent.png'>
+                        <p>So many great book many snippets...we can't put them all here. The best of the rest go <a href='https://100millionbooks.org/blog' target='_blank'>on our blog</a>. Sign up & we'll keep you updated.</p>
+                        
+                        <input type='email' placeholder='your email'>
+                        <a class='btn btn-primary service-action send-email' href="#">Get the Email <i class="fa fa-angle-right"aria-hidden="true"></i></a>
+                        <i class="fa fa-cog fa-spin fa-fw get-email-status loading"></i> <i class="fa fa-check get-email-status success" aria-hidden="true"></i> <i class="fa fa-times get-email-status fail" aria-hidden="true"></i>
+                    </div>
+                    <div class='announcement-third'>
+                        
+                    </div>
+
+                    <a class='btn btn-primary btn-special'><i class="fa fa-angle-up" aria-hidden="true"></i> Hide Announcements <i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="row snippet-area">
+            <div class="post-load">
+                <div class="col-xs-4 cover">
+                    <div class="coverImage">
+                        <img id="book-img" src="" alt="">
+                    </div>
+                </div>
+                
+                <div class="col-xs-6 col-xs-offset-5 quote">
+                    
+                    <div id="book-snippet">
+                    
+                    </div>
+                    
+                    <div id="book-info">
+                    
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="pre-load">
+                <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="row status-area">
+            <div class="">
+                <img src="./images/logo128.png">
+                <div id="about">
+                    <p><a href="https://100millionbooks.org" target="_blank">100 Million Books</a> is an <a href="https://github.com/100millionbooks" target="_blank">open-source project</a> backed by <a href="https://github.com/100millionbooks/strategy" target="_blank">strict principles</a>. Feel free to reach out to Lead Maintainer <a href="mailto:steve@100millionbooks.org" target="_blank">Steve Jain</a> directly.</span></p>
+                    <p class="end-note"><i class="far fa-lightbulb" aria-hidden="true"></i> <a target="_blank" href="https://100millionbooks.org/suggest">Send a book snippet!</a></a></p>
+                    <p class="end-note"><span class="">Blog relaunching soon, along with some more cool stuff! 🎉<!--<img src='images/elephant-square-transparent-700.png'> An organization is controlled by those who pay it. (<a href='https://medium.com/@100millionbooks/meet-loka-our-hero-mascot-for-eternal-independence-84b85a498234' target='_blank'>Source</a>)</span>--></p>
+                    <p class="footer-action settings time-left" data-toggle='tooltip' data-placement='top' title='Make books update quicker'><i class="fa fa-clock-o" aria-hidden="true"></i> New Book in <span id='time-left'>00:00:00</span></p>
+                    <p class="footer-action settings real-settings" data-toggle='tooltip' data-placement='top' title='Edit settings'><i class="fa fa-cog" aria-hidden="true"></i></p>
+                    <p class="footer-action history" data-toggle='tooltip' data-placement='top' title='See past 20 books'><i class="fa fa-history" aria-hidden="true"></i></p>
+                    <p class="footer-action favorites" data-toggle='tooltip' data-placement='top' title='See your favorites'><i class="fa fa-star" aria-hidden="true"></i></p>
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>

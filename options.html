@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>100 Million Books Options</title>
+
+        <meta charset="utf-8" />
+        
+        <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/css/flat-ui.min.css">
+        <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendor/css/animate.min.css">
+
+        <script src="vendor/js/jquery.min.js"></script>
+        <script src="vendor/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="options.css">
+    </head>
+
+    <body>
+        
+        <div id='options-wrapper'>
+        
+            <div id='section-header'>
+                <img src='images/logo-circular-smaller.png'>
+                <h2>Settings</h2>
+            </div>
+            
+            <div class="ext-setting update-interval">
+                <!--<i class="fa fa-star gold-indicator" aria-hidden="true"></i>-->
+                <p>Update books every:</p>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="update-every" value="seconds" checked>
+                    <span>3 seconds</span>
+                </label>
+                </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="update-every" value="minutes">
+                    <span>30 minutes</span>
+                </label>
+                </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="update-every" value="hours">
+                    <span>3 hours</span>
+                </label>
+                </div>
+                <div class="radio">
+                    <label>
+                    <input type="radio" name="update-every" value="days">
+                    <span>30 hours</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="ext-setting speed-dial">
+                <p>Show these 'speed-dial' links in the top-right:<br>(make sure you enter a title with each URL)</p>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+                <div style='margin-bottom:10px;'>
+                    <input type='url' class='speed-dial-url' placeholder='site url'>
+                    <input type='text' class='speed-dial-title' placeholder='site title'>
+                </div>
+            </div>
+            
+            <div class="ext-setting">
+                <p>For more book info & reviews, show links to:</p>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="save-to" value="goodreads" checked>
+                    <span>Goodreads</span>
+                </label>
+                </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="save-to" value="librarything">
+                    <span>LibraryThing</span>
+                </label>
+                </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="save-to" value="neither">
+                    <span>Neither</span>
+                </label>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <p class="settings-saved-message">Saved!</p>
+                
+                <button id="save">Save</button>
+                
+                <p class="settings-saved-message">Saved!</p>
+            </div>
+        </div>
+
+        <script src="options.js"></script>
+    
+    </body>
+</html>
