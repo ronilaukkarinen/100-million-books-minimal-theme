@@ -208,9 +208,7 @@ p.visual-quote {
 
 .row.snippet-area .cover {
     text-align: center;
-    height: 50vh;
     position: fixed;
-    margin-top: -20px;
     width: 100%;
 }
 
@@ -721,9 +719,9 @@ p.visual-quote {
 
 #book-actions, #book-tags {
     text-align: center;
-    position: absolute;
-    width: calc(100% - 30px);
-    bottom: -10px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #book-tags {
