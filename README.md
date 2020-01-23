@@ -2,7 +2,7 @@
 
 [100 million books](https://github.com/100millionbooks) is a web app/Chrome extension that shows random book from 100 million books on new tab or new reload. I prefer more minimal approach so designed a theme for it.
 
-![Screenshot](https://i.imgur.com/nP2NFYl.png "Screenshot")
+![Screenshot](https://i.imgur.com/U4EymDs.png "Screenshot")
 
 ## Installation
 
